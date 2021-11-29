@@ -1,0 +1,119 @@
+:root {
+  --bg: #dcdde1;
+  --color-icon: white;
+  --social-icon1: #e4405f;
+  --social-icon2: #3b5999;
+  --social-icon3: #e4405f;
+  --social-icon4: #cd201f;
+  --social-icon5: #0077B5;
+}
+
+
+/* Footer Section*/
+
+footer {
+  background-color: black;
+  text-align: center;
+  /* padding-top: 2px; */
+}
+
+footer p {
+  background-color: black;
+  font-size: 16px;
+  padding-top: 5px;
+  height:40px;
+  color: #ccc;
+  margin-top: 10px;
+  /* box-shadow: 0 1px 5px rgb(138, 137, 137); */
+}
+
+.icon-container{
+  margin:0 auto;
+  margin-top: 80px;
+
+
+  /* width: 50%; */
+  max-width: 50rem;
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+  /* background-color: gray; */
+}
+
+
+.icon-item {
+  list-style: none
+  margin-left: 10px;
+  margin-left: 10px;
+  margin-right: 40px;
+  margin-top: 10px;
+  /* background-color: red; */
+
+}
+
+.icon-link {
+  display: inline-flex;
+  font-size: 3rem;
+  text-decoration: none;
+  color: var(--color-icon);
+  width: 5rem;
+  height: 5rem;
+  transition: .5s linear;
+  position: relative;
+  z-index: 1;
+  margin: auto
+}
+
+.icon-link:hover {
+  color: #fff;
+}
+
+.icon-link i {
+  margin: auto;
+}
+
+.icon-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 5rem;
+  height: 5rem;
+  background: #000;
+  border-radius: 50%;
+  z-index: -1;
+  transform: scale(0);
+  transition: 0.2s cubic-bezier(.95, .32, .37, 1.21);
+}
+
+.icon-link:hover::before {
+  transform: scale(1);
+  text-decoration: none;
+}
+
+.icon-item:nth-child(1) a:hover:before {
+  background: var(--social-icon1);
+  text-decoration: none;
+}
+
+.icon-item:nth-child(2) a:hover:before {
+  background: var(--social-icon2);
+  text-decoration: none;
+}
+
+.icon-item:nth-child(3) a:hover:before {
+  background: var(--social-icon4);
+  text-decoration: none;
+}
+
+.icon-item:nth-child(4) a:hover:before {
+  background: var(--social-icon5);
+  text-decoration: none;
+}
+
+
+/* =============================== */
+
+/* =============================== */

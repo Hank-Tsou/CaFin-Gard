@@ -1,0 +1,653 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Montserrat", sans-serif;
+
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  background-image: -webkit-linear-gradient(90deg, #a6e3e9 40%, #e3fdfd 60%);
+}
+
+header {
+  /* background-color: #4285F4; */
+  background-color: white;
+  /* margin: auto -16px; */
+  padding-bottom: 18px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.totech{
+  display:flex;
+  justify-content: center;
+  width:100vw;
+  height:45px;
+  padding-top: 10px;
+  color:white;
+  background-color: #4285F4;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+}
+
+.totech p{
+  /* background-color: red; */
+  margin-top: 2px;
+}
+
+.totech a{
+  color: rgb(255,199,44);
+  text-decoration: none;
+}
+
+.totech img{
+  width:25px;
+  height:25px;
+  border-radius: 100px;
+  margin-right: 10px;
+}
+
+.historyContainer{
+  position:absolute;
+  z-index: 10;
+  right:0;
+  width:50vw;
+  height:730px;
+  background-color: rgba(0,0,0,0.9);
+  transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+}
+
+.initalHistory{
+  display: none;
+}
+
+.showHistory{
+  animation: slide-in 1s forwards;
+  -webkit-animation: slide-in 1s forwards;
+  /* display: block; */
+}
+
+.hideHistory{
+  animation: slide-out 1s ;
+  -webkit-animation: slide-out 1s ;
+  display: none;
+}
+
+.returnAndName{
+  position:relative;
+  display:flex;
+  justify-content: center;
+}
+
+.returnAndName img{
+  position: absolute;
+  left:0px;
+  top:5px;
+  width:70px;
+  height:70px;
+  cursor: pointer;
+}
+
+.returnAndName h1{
+  margin-top: 20px;
+  margin-bottom: 10px;
+  /* font-weight: 600; */
+  font-size: 36px;
+  color: white;
+}
+
+.historyTitle, .historyList{
+  display:flex;
+  font-size: 18px;
+  margin-left: 20px;
+  margin-top: 25px;
+  width:600px;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+  background-color: white;
+}
+
+.historyTitle{
+  margin-bottom: 50px;
+  background-color: #FBBC05;
+}
+
+
+.historyId, .historyName, .historySize, .historyNumber, .historyAmount, .historyTime{
+  height:50px;
+  padding-top: 15px;
+  text-align: center;
+}
+.historyId{
+  width:40px;
+}
+.historyName{
+  width:150px;
+}
+.historySize{
+  width:100px;
+}
+.historyNumber{
+  width:50px;
+}
+.historyAmount{
+  width:100px;
+}
+.historyTime{
+  width:180px;
+}
+
+
+
+header h1 {
+  color: black;
+  font-weight: 200;
+}
+
+.topContainer{
+  position:relative;
+  display: flex;
+}
+
+.topContainer h1{
+  margin-left: 15px;
+  margin-top: 10px;
+  font-size: 28px;
+}
+
+.topButtonContainer{
+  position:absolute;
+  display:flex;
+  top:15px;
+  right:8px;
+  width: 200px;
+  height: 36px;
+  /* background-color: red; */
+}
+
+.appTitle img{
+  position:relative;
+  width:55px;
+  height:55px;
+  top: 13px;
+  /* right:0; */
+  margin-right: 8px;
+  /* border-radius: 100px; */
+  /* margin-right: 10px; */
+  background-color: red;
+}
+
+.historyButton{
+  /* position:absolute;
+  top:15px;
+  right:8px; */
+  border: 1px solid #4285F4;
+  background-color: white;
+  width: 90px;
+  height: 36px;
+  font-size: 20px;
+  border-radius: 10px;
+  color: black;
+  margin-left: 10px;
+  margin-right: 10px;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+}
+
+.logoutButton{
+  background-color: #4285F4;
+  width: 90px;
+  height: 36px;
+  font-size: 20px;
+  border-radius: 10px;
+  color: white;
+  margin-left: 10px;
+  margin-right: 10px;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+}
+
+.historyButton:hover {
+  background-color: #1f75fe;
+  color: white;
+}
+
+.logoutButton:hover {
+  background-color: white;
+  color: black;
+}
+
+.DateRemainContainer{
+  position:relative;
+  display: flex
+  justify-content: center;
+}
+
+header .appTitle{
+  /* position:relative; */
+  text-align: center;
+  font-weight: 600;
+  /* background-color: red; */
+}
+
+header .coffineRemain{
+  position:absolute;
+  right:18px;
+  bottom:-5px;
+  font-size: 20px;
+  /* background-color: blue; */
+}
+
+.timeContainer h1{
+  margin-top: 20px;
+  /* margin-bottom: 8px; */
+  /* margin-bottom: 8px; */
+  font: normal 28px/100% "Andale Mono", AndaleMono, monospace;
+  text-align: center;
+}
+
+.remainInfoContainer{
+  text-align: center;
+}
+
+
+.note {
+  position:relative;
+  text-align: center;
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #ccc;
+  /* padding-top: 3px; */
+  /* padding-bottom: 3px; */
+  height:70px;
+  width: 145px;
+  margin: 16px;
+  float: left;
+}
+.note h1 {
+  font-size: 16px;
+  margin-top:3px;
+  margin-bottom: 5px;
+}
+.note p {
+  font-size: 12px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+.note button{
+  position:absolute;
+  width:20px;
+  height:20px;
+  top:-8px;
+  right:-8px;
+  background-color: lightgray;
+  display: inline-block;
+  font-size: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 100%;
+}
+/* ========================================================== coffe Store Container */
+.coffeStoreContainer{
+  display:flex;
+  justify-content: center;
+}
+
+/* ================================= coffe Store Selection */
+.coffeeSelection {
+  position:relative;
+  width: 150px;
+  margin: 50px 15px 20px 15px;
+  /* background-color: red; */
+  /* background: #fff; */
+  /* border-radius: 7px; */
+  /* box-shadow: 0 1px 5px rgb(138, 137, 137); */
+}
+
+.cupRemainCircle{
+  position: absolute;
+  right:20px;
+  top: -12px;
+  /* right:-8px;
+  top: 65px; */
+  width:20px;
+  height:20px;
+  text-align: center;
+  border-radius: 100%;
+  background-color: #F5F5F5;
+  box-shadow: 0 1px 5px rgb(138, 137, 137)
+}
+
+.limitCover{
+  position:absolute;
+  width: 150px;
+  height: 190px;
+  margin: -20px auto 20px auto;
+  border-radius: 7px;
+  background-color: rgba(0,0,0,0.5)
+}
+
+.coffeeSelection img{
+  width: 90px;
+  height: 90px;
+  /* border-radius: 100%; */
+  display: block;
+  margin: 0 auto;
+  /* border: 2px solid #555; */
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+  transition: transform .2s;
+}
+
+.coffeeSelection img:hover {
+  transform: scale(2);
+  cursor: pointer;
+}
+
+.coffeeSelection h2{
+  text-align: center;
+  font-size: 18px;
+  margin-top: 14px;
+  margin-bottom: 5px;
+}
+
+.coffeeSelection p{
+  text-align: center;
+  font-size: 14px;
+  /* margin-top: 5px; */
+  margin-bottom: 8px;
+}
+
+
+.hidePickCoffeeContainer{
+  display:none;
+}
+
+.showPickCoffeeContainer{
+  position: absolute;
+  display:block;
+  top:0;
+  width:100vw;
+  height:600px;
+  animation: transitionIn 0.5s;
+
+}
+
+.pickCoffeeCard{
+
+  position:relative;
+  text-align: center;
+  width:100vw;
+  height:780px;
+  z-index: 99 !important;
+  padding-top:10px;
+
+  background-color: rgba(0,0,0,0.9);
+}
+
+.pickCoffeeCard h1{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 28px;
+  color: white;
+}
+
+.unPick{
+  position:absolute;
+  right:20px;
+  top:10px;
+  height:40px;
+  width:40px;
+  text-align: center;
+  font-size: 28px;
+  color:white;
+  font-weight: bold;
+  background-color: transparent;
+}
+
+iframe{
+  width: 480px;
+  height: 270px;
+  margin-bottom: 10px;
+}
+
+.pickCoffeeCard p{
+  margin-left: 130px;
+  margin-right: 130px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  /* width: 200px;
+  height: 90px;
+  background-color: red; */
+}
+
+.selectSize{
+    border: 1px solid white;
+    border-radius: 8px;
+}
+
+.sizeContainer{
+  display:flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  /* background-color: red; */
+}
+
+.sizeContainer .smallcup{
+  width:30px;
+  height:40px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 40px;
+  cursor: pointer;
+}
+.sizeContainer .mediumcup{
+  width:40px;
+  height:60px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.sizeContainer .largecup{
+  width:50px;
+  height:80px;
+  margin-left: 20px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.coffeeCup{
+  width:20px;
+  height:20px;
+  border-radius: 100px;
+}
+
+.showCupCounter{
+  display:block;
+}
+
+.hideCupCounter{
+  display:none;
+}
+
+.cupCounter{
+  display:none;
+  position:relative;
+  display: flex;
+  margin-top: 25px;
+
+  width: 220px;
+  margin: 0 auto;
+  /* background-color: red; */
+}
+
+.cupNumber{
+  width: 60px;
+  height: 60px;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 48px;
+  color:white;
+  /* background-color: blue; */
+}
+
+
+button{
+  border: none;
+  cursor: pointer;
+  /* outline: none; */
+}
+
+.addLimitCover{
+  position:absolute;
+  right:0;
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 8%;
+  width: 60px;
+  height: 60px;
+}
+
+.decreaseLimitCover{
+  position:absolute;
+  left:0;
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 8%;
+  width: 60px;
+  height: 60px;
+}
+
+.cupCounter button{
+  background-color: #6bbe92;
+  border-radius: 8%;
+  width: 60px;
+  height: 60px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 48px;
+}
+
+.pickCoffeeCard h3{
+  margin-top: 10px;
+  margin-bottom: 40px;
+  color:white;
+}
+
+.addButton {
+  border: 2px solid #6bbe92;
+  background-color: transparent;
+  width: 80px;
+  height: 50px;
+  font-size: 28px;
+  border-radius: 10px;
+  color: white;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 5px;
+}
+
+.addButton:hover {
+  background-color: #6bbe92;
+  color: black;
+}
+
+
+
+
+.selectedCoffeeContainer{
+  /* background-color: red; */
+  height: 120px;
+  display:flex;
+  justify-content: center;
+}
+
+
+
+
+.DecisionContainer{
+  margin-bottom: 30px;
+}
+
+
+.DecisionContainer p{
+  margin-top: 20px;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+
+  text-align: center;
+}
+
+.DecisionButton{
+  display: flex;
+  justify-content: center;
+}
+
+.DecisionButton{
+  margin-top: 30px;
+}
+.DecisionButton button{
+  background-color: #6bbe92;
+  width: 90px;
+  height: 36px;
+  font-size: 20px;
+  border-radius: 10px;
+  color: #fff;
+  margin-left: 10px;
+  margin-right: 10px;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+}
+.DecisionButton button:hover{
+  background-color: #3e8e41
+}
+
+
+@keyframes transitionIn {
+  from{
+    opacity: 0;
+  }
+
+  to{
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    -webkit-transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+  }
+}
+
+@-webkit-keyframes slide-in {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@-webkit-keyframes slide-out {
+  0% {
+    -webkit-transform: translateX(0%);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+  }
+}
